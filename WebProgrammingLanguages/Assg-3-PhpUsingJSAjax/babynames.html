@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="author" content="Kanika">
+	<meta charset="UTF-8">
+	<meta name="description" content="Kanika_Assignment-3">
+	<meta name="keywords" content="html/text">
+	<title>Baby Names Ranking </title>
+
+	<!-- External CSS Files -->
+	<link rel="stylesheet" type="text/css" href="kxk140230_CSSindex.css">
+
+	<!-- JQUERY -->
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+	<!-- External JS File -->
+	<script type="text/javascript" src="kxk140230_JSindex.js"></script>
+</head>
+<body>
+
+<h3>Baby Names Yearly Ranking</h3>
+	<div class="mainClass">
+		<div class="controlClass">
+
+	<!-- Form Element -->
+	<form>
+		<label>Select Year from List: </label>
+
+		<!-- Drop Down list for Year -->
+		<select id="chooseYear">
+  		<option value="2004">2004</option>
+  		<option value="2005">2005</option>
+  		<option value="2006">2006</option>
+  		<option value="2007">2007</option>
+  		<option value="2008">2008</option>
+  		<option value="2009">2009</option>
+  		<option value="2010">2010</option>
+  		<option value="2011">2011</option>
+  		<option value="2012">2012</option>
+  		<option value="2013">2013</option>
+		</select><br><br>
+
+		<!-- Submit Button -->
+		<!--Once clicked on the button, call Ajax function which will ultimately make a request for babynames.php on the server. -->
+		<button id="submitButton">Results</button>
+	</form>
+	</div>
+
+	<div class="displayYear">Top Five names for Birth in  <span class="year">year</span></div>
+		
+		<div class="maleDiv">	 </div>
+		<div class="femaleDiv"> </div>
+	</div>
+
+</body>
+</html>

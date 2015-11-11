@@ -1,0 +1,229 @@
+#header
+{
+background-image: url('http://www.all-sweets.com/gradient-wallpaper/light-gradient/light-gradient-3-1920x1080.jpg');
+color:#050C12;
+height: 250px;
+font-size: 38px;
+font-style: italic;
+margin: 20px 20px 5px 50px;
+font-weight: bold;
+text-align:left;
+padding:10px;
+border: 6px inset #C11B17;
+}
+
+#headerPicture
+{
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+}
+
+.menu {
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #BFF036;
+    text-shadow: 2px 1px 2px #333333;
+    border-radius: 2px;
+}
+
+#leftPanel
+{
+    float:left;
+    margin-left: 50px;
+    margin-right: 5px;
+    width: 20%;
+}
+
+.rightPanel {
+    float: right;
+    margin-right: 60px;
+    margin-left: 1px;
+    width: 70%;     
+}
+
+
+.menu ul {
+    height: auto;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu li 
+{ 
+display: inline; 
+padding: 10px; 
+}
+
+.menu a {
+    text-decoration: none;
+    color: #00F;
+}
+
+.menu a:hover {
+    color: #F90;
+}
+
+
+body
+{
+    background-color: #566D7E;
+}
+
+#kanikaPicture
+{
+    float:left;
+    height: auto; 
+    width: auto; 
+    max-width: 500px; 
+    max-height: 600px;
+    margin: 5px;
+    border: 4px inset #FBB117;
+}
+
+.divHeading {
+    float: left;    
+    color:#34282C;
+    font-size: 21px;
+}
+
+.myDivisions, .sidebarinfo
+{
+    float:left;  
+    padding: 5px;
+    background-color: #84B2B0;
+    border: 2px outset #0A045E;
+    color:black;
+    margin: 10px;
+}
+.myDivisions {
+    width: 100%; 
+    padding: 10px;
+}
+
+
+.listHeading {
+    color:#34282C;
+    list-style-image: url('http://icons.iconarchive.com/icons/mixthepix/jules-verne/24/Nautilus-Ship-Steering-Wheel-icon.png');  
+
+}
+
+
+.tooltiputd
+{
+    color: #F45905;
+    font-weight: bold;  
+}
+
+.divHeading, .listHeading {
+    padding: 1px;
+    font-weight: bold;
+    clear: both;
+    font-size: 16px;
+}
+
+
+
+.divDescription {
+    float: left;
+    color: black;
+    font-size: 15px;
+    text-align: justify;
+    text-indent: 25px;
+}
+
+.myLists
+{
+    float:left;
+    clear:both;
+
+}
+
+p
+{
+
+    text-align: left;
+    color:red;
+    margin: 10px;   
+}
+
+
+
+.listOrder
+{
+    float: left;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    font-size: 15px;
+    list-style-image: url('http://icons.iconarchive.com/icons/icons8/ios7/16/Messaging-Pin-icon.png');
+}
+
+a:hover 
+{
+    font-style: italic;
+    text-decoration: underline;
+    color:#F52855;
+}
+
+.listContact
+{
+    
+    font-size: 18px;
+    list-style-image:url('http://icons.iconarchive.com/icons/icons8/ios7/16/Messaging-Pin-icon.png'); 
+}
+
+a:link 
+{
+    text-decoration: none;
+    color: #201CA4;
+}
+
+
+a:visited
+{
+    color: #A42E1C;
+}
+
+table
+{
+    margin: 4px 4px 4px 4px;
+    float: left;
+    border: 3px solid green;
+    font-size: 20px;
+    
+}
+th
+{
+    height: 22px;
+    background-color: #109E91;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 22px;
+    font-style: italic;
+    border:5px solid green;
+    font-size: 20px;
+    
+}
+td
+{
+    text-align: center;
+    padding: 5px;
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+tr
+{
+    height: 15px;
+    border: 3px solid green;
+   
+}
+
+
+*{
+    font-family: Sans-Serif;
+}

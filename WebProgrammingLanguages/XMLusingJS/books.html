@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>Kanika-Prac3</title>
+
+<script src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+function loadData() {
+
+$.ajax({
+
+url : "books.xml",
+dataType : "xml",
+success : function(data) {
+
+$(data).find('book').each(
+function() {
+
+var manyAuthors = "";
+var title = $(this).find('title').text();
+var year = $(this).find('year').text();
+var price = $(this).find('price').text();
+var category = $(this).attr('category');
+
+$(this).find('author').each(function() {
+manyAuthors = manyAuthors + $(this).text() + ", ";
+});
+
+var bookXMLData = "<tr><td>"+title+"</td><td>"+ manyAuthors +"</td><td>"+ year +"</td><td>"+ price +"</td><td>"+category+"</td></tr>";
+
+$("#myTable1").append(bookXMLData);
+});
+
+},
+error : function() {
+alert("error loading file");
+}
+});
+}
+</script>
+</head>
+<body onload="loadData()">
+<table id="myTable1" border = "2">
+	<tr>
+		<th>Title</th>
+		<th>Author(s)</th>
+		<th>Year</th>
+		<th>Price</th>
+		<th>Category</th>
+	</tr>
+</table>
+</body>
+</html>

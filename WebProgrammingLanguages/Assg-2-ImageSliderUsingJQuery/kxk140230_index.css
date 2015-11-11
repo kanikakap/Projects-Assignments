@@ -1,0 +1,192 @@
+#slider-wrapper 
+{
+    width:800px;
+    height:500px;
+   
+}
+
+#slider 
+{
+    width:800px;
+    height:500px;
+    position:relative;
+}
+
+p
+{
+    position: fixed;
+    left:200px;
+    font-size: 30px;
+    color: #190707; 
+    background: #FF8000; 
+    font-weight: bold;
+    border: 2px inset black;
+}
+
+.myImages {
+    width:800px;
+    height:500px;
+    border-color: black;
+    border-style: inset;
+    border-width: 5px;
+    position: fixed;
+    top:100px;
+    bottom: 100px;
+    left:200px;
+    right: 100px;
+}
+
+.myImages .caption 
+{
+ position: absolute; 
+ width: 283px; 
+ height: 50px;
+  bottom: 0px; 
+  left: 0px;
+  font-size: 20px;
+   color: #ffffff; 
+   background: #04B404; 
+   text-align:center; 
+   font-style: italic;
+   font-weight:bold; 
+   opacity:0.7; 
+} 
+
+#nav 
+{
+    margin-top:20px;
+}
+
+#previousButton
+{
+float: left;
+position: fixed; 
+width: 30px; 
+height: 2px;
+top:300px;
+bottom: 400px;
+left:250px;
+right: 200px;
+
+opacity:0.7; 
+}
+
+#nextButton
+{
+float: right;
+position: fixed; 
+width: 30px; 
+height: 2px;
+top:300px;
+bottom: 400px;
+left:850px;
+right: 500px;
+opacity:0.7; 
+}
+
+#button1
+{
+float: left;
+position: fixed;
+width:10px;
+height:5px;
+margin:10px;
+padding:20px;
+border-radius:5%;
+top: 500px;
+bottom:200px;
+left:450px;
+right: 600px;
+}
+
+#button2
+{
+float: left;
+position: fixed;
+width:10px;
+height:5px;
+margin:10px;
+padding:20px;
+border-radius:5%;
+top: 500px;
+bottom:200px;
+left:500px;
+right: 600px;
+}
+
+#button3 
+{
+float: left;
+position: fixed;
+width:10px;
+height:5px;
+margin:10px;
+padding:20px;
+border-radius:5%;
+top: 500px;
+bottom:200px;
+left:550px;
+right: 600px;
+}
+
+
+#button4 
+{
+float: left;
+position: fixed;
+width:10px;
+height:5px;
+margin:10px;
+padding:20px;
+border-radius:5%;
+top: 500px;
+bottom:200px;
+left:600px;
+right: 600px;
+}
+
+
+
+#button5 
+{
+float: left;
+position: fixed;
+width:10px;
+height:5px;
+margin:10px;
+padding:20px;
+border-radius:5%;
+top: 500px;
+bottom:200px;
+left:650px;
+right: 600px;
+}
+
+#button6
+{
+float: left;
+position: fixed;
+width:10px;
+height:5px;
+margin:10px;
+padding:20px;
+border-radius:5%;
+top: 500px;
+bottom:200px;
+left:700px;
+right: 600px;
+}
+
+button
+{
+font-weight: bold;
+background: #aaaaaa;
+border: 2px solid rgba(33, 68, 72, 0.59);
+text-align: center;
+font: bold 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+
+
+
+

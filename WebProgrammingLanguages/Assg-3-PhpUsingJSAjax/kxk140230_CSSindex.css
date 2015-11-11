@@ -1,0 +1,106 @@
+*
+{
+	font:18px Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+
+}
+
+
+h3
+{
+	margin: 10px 380px 5px 380px;
+	padding: 20px;
+	border-width: 3px;
+	border-color: red;
+	border-style: outset;
+	text-align: center;
+	font-weight: bold;
+	font-size: 28px;
+	background-color: #F55E0C;
+	
+}
+
+.mainClass
+{
+	width: 800px;
+	height:600px;
+	padding: 15px;
+	margin: 30px auto;
+	border: 3px ridge black;
+	background-color: #F0F1F5;
+
+}
+
+
+#submitButton
+{
+color:#08233e;
+padding:10px;
+width:100px;
+background-color: #12A630;
+font-size: 20px;
+}
+
+.controlClass, .displayYear
+{
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 50%;
+
+}
+
+.displayYear
+{
+	font-size: 20px;
+}
+.maleDiv
+{
+	color:#194BD4;
+	float: right;
+	margin-left: 10%;
+
+}
+.femaleDiv
+{
+	color: #E80EA3;
+	float: left;
+	margin-right: 10%;
+
+}
+.maleDiv, .femaleDiv
+{
+	width: 280px;
+	height: 300px;
+	padding: 15px;
+	border-width: 3px;
+	border-color: yellow;
+	border-style: inset;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	font-size: 22px;
+	display: none;
+
+}
+
+.displayYear
+{
+	
+	display: none;
+	margin-top: 30px;
+	text-align: center;
+	background-color: #989A9E;
+	border: 3px inset black;
+
+}
+.year
+{
+	font-weight: bold;
+	font-style: italic;
+
+}
+.format
+{
+	font-size: 13px;
+	font-style: italic;
+
+}
+
