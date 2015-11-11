@@ -1,0 +1,831 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-18 "http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#"
+     xml:base="http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-18="http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#attend -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-18;attend">
+        <rdfs:domain rdf:resource="&untitled-ontology-18;Bored"/>
+        <rdfs:range rdf:resource="&untitled-ontology-18;Event"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-18;Happy"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-18;Helpful"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-18;Neutral"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-18;Peaceful"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-18;Studious"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-18;User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#conducts -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-18;conducts">
+        <rdfs:domain rdf:resource="&untitled-ontology-18;Building"/>
+        <rdfs:range rdf:resource="&untitled-ontology-18;Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#has_Auditorium -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-18;has_Auditorium">
+        <rdfs:comment>Tells us about the number of Auditoriums in a Building</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-18;Building"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#has_Duration -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-18;has_Duration">
+        <rdfs:comment>Tells about the Duration of Event</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-18;Event"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#has_Fees -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-18;has_Fees">
+        <rdfs:comment>Tells us if the Event has Fees. It returns True or False</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-18;Event"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#has_Food -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-18;has_Food">
+        <rdfs:comment>Tells if the Event offers Food. It returns True or False</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-18;Event"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#reach_By -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-18;reach_By">
+        <rdfs:comment>Tells us about how to reach the Building.</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-18;Building"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#start_Time -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-18;start_Time">
+        <rdfs:comment>Tells us about the Start Time of Event.</rdfs:comment>
+        <rdfs:domain rdf:resource="&untitled-ontology-18;Event"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Bored -->
+
+    <owl:Class rdf:about="&untitled-ontology-18;Bored">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-18;User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Building -->
+
+    <owl:Class rdf:about="&untitled-ontology-18;Building"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Contest -->
+
+    <owl:Class rdf:about="&untitled-ontology-18;Contest">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-18;Programming"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Cultural -->
+
+    <owl:Class rdf:about="&untitled-ontology-18;Cultural">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-18;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Event -->
+
+    <owl:Class rdf:about="&untitled-ontology-18;Event"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#FraternityMeets -->
+
+    <owl:Class rdf:about="&untitled-ontology-18;FraternityMeets">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-18;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Happy -->
+
+    <owl:Class rdf:about="&untitled-ontology-18;Happy">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-18;User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Helpful -->
+
+    <owl:Class rdf:about="&untitled-ontology-18;Helpful">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-18;User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Informational -->
+
+    <owl:Class rdf:about="&untitled-ontology-18;Informational">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-18;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Location -->
+
+    <owl:Class rdf:about="&untitled-ontology-18;Location"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Neutral -->
+
+    <owl:Class rdf:about="&untitled-ontology-18;Neutral">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-18;User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#OffCampus -->
+
+    <owl:Class rdf:about="&untitled-ontology-18;OffCampus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-18;Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#OnCampus -->
+
+    <owl:Class rdf:about="&untitled-ontology-18;OnCampus">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-18;Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Peaceful -->
+
+    <owl:Class rdf:about="&untitled-ontology-18;Peaceful">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-18;User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Programming -->
+
+    <owl:Class rdf:about="&untitled-ontology-18;Programming">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-18;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Studious -->
+
+    <owl:Class rdf:about="&untitled-ontology-18;Studious">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-18;User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#User -->
+
+    <owl:Class rdf:about="&untitled-ontology-18;User"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Volunteer -->
+
+    <owl:Class rdf:about="&untitled-ontology-18;Volunteer">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-18;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Workshop -->
+
+    <owl:Class rdf:about="&untitled-ontology-18;Workshop">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-18;Programming"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#ATEC -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;ATEC">
+        <rdf:type rdf:resource="&untitled-ontology-18;Building"/>
+        <has_Auditorium rdf:datatype="&xsd;integer">5</has_Auditorium>
+        <reach_By rdf:datatype="&xsd;string">Comet_Cab</reach_By>
+        <conducts rdf:resource="&untitled-ontology-18;Bhangra_Night"/>
+        <conducts rdf:resource="&untitled-ontology-18;Model_Based_Simulation_For_CyberThreat"/>
+        <conducts rdf:resource="&untitled-ontology-18;State_Farm_Intern_Fair"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#ActivityCenter -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;ActivityCenter">
+        <rdf:type rdf:resource="&untitled-ontology-18;Building"/>
+        <has_Auditorium rdf:datatype="&xsd;integer">3</has_Auditorium>
+        <reach_By rdf:datatype="&xsd;string">foot</reach_By>
+        <conducts rdf:resource="&untitled-ontology-18;Alpha_Kappa_Psi_Induction_Ceremony"/>
+        <conducts rdf:resource="&untitled-ontology-18;Animal_Shelter_Drive"/>
+        <conducts rdf:resource="&untitled-ontology-18;Bronies_UTD_Meet"/>
+        <conducts rdf:resource="&untitled-ontology-18;ETS_Workshop"/>
+        <conducts rdf:resource="&untitled-ontology-18;Living_Water_Student_Fellowship_Meet"/>
+        <conducts rdf:resource="&untitled-ontology-18;RUBY_On_Rails_Contest"/>
+        <conducts rdf:resource="&untitled-ontology-18;Radio_UTD_Volunteering"/>
+        <conducts rdf:resource="&untitled-ontology-18;St_Louis_Day_Celebration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Alpha_Kappa_Psi_Induction_Ceremony -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Alpha_Kappa_Psi_Induction_Ceremony">
+        <rdf:type rdf:resource="&untitled-ontology-18;FraternityMeets"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;OffCampus"/>
+        <start_Time rdf:datatype="&xsd;dateTime">15:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;string">2Hours</has_Duration>
+        <has_Fees rdf:datatype="&xsd;boolean">false</has_Fees>
+        <has_Food rdf:datatype="&xsd;boolean">true</has_Food>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Alpha_Phi_Theta_Fellowship -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Alpha_Phi_Theta_Fellowship">
+        <rdf:type rdf:resource="&untitled-ontology-18;FraternityMeets"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;OnCampus"/>
+        <start_Time rdf:datatype="&xsd;dateTime">09:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;string">1Hour</has_Duration>
+        <has_Fees rdf:datatype="&xsd;boolean">false</has_Fees>
+        <has_Food rdf:datatype="&xsd;boolean">true</has_Food>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Android_Beginner_Workshop -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Android_Beginner_Workshop">
+        <rdf:type rdf:resource="&untitled-ontology-18;OnCampus"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;Workshop"/>
+        <start_Time rdf:datatype="&xsd;dateTime">14:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;string">3Hours</has_Duration>
+        <has_Fees rdf:datatype="&xsd;boolean">true</has_Fees>
+        <has_Food rdf:datatype="&xsd;boolean">true</has_Food>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Animal_Shelter_Drive -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Animal_Shelter_Drive">
+        <rdf:type rdf:resource="&untitled-ontology-18;OffCampus"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;Volunteer"/>
+        <start_Time rdf:datatype="&xsd;dateTime">14:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;string">5Hours</has_Duration>
+        <has_Food rdf:datatype="&xsd;boolean">false</has_Food>
+        <has_Fees rdf:datatype="&xsd;boolean">false</has_Fees>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Bhangra_Night -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Bhangra_Night">
+        <rdf:type rdf:resource="&untitled-ontology-18;Cultural"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;OnCampus"/>
+        <start_Time rdf:datatype="&xsd;dateTime">19:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;integer">3</has_Duration>
+        <has_Fees rdf:datatype="&xsd;boolean">true</has_Fees>
+        <has_Food rdf:datatype="&xsd;boolean">true</has_Food>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Bored -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Bored">
+        <rdf:type rdf:resource="&untitled-ontology-18;Bored"/>
+        <attend rdf:resource="&untitled-ontology-18;Bhangra_Night"/>
+        <attend rdf:resource="&untitled-ontology-18;Chinese_New_Year_Celebration"/>
+        <attend rdf:resource="&untitled-ontology-18;ISA_Diwali"/>
+        <attend rdf:resource="&untitled-ontology-18;St_Louis_Day_Celebration"/>
+        <attend rdf:resource="&untitled-ontology-18;Texas_Party"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Bronies_UTD_Meet -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Bronies_UTD_Meet">
+        <rdf:type rdf:resource="&untitled-ontology-18;OffCampus"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;Volunteer"/>
+        <start_Time rdf:datatype="&xsd;dateTime">17:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;integer">8</has_Duration>
+        <has_Food rdf:datatype="&xsd;boolean">true</has_Food>
+        <has_Fees rdf:datatype="&xsd;boolean">true</has_Fees>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Catch_Comet_pride_Series -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Catch_Comet_pride_Series">
+        <rdf:type rdf:resource="&untitled-ontology-18;OnCampus"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;Volunteer"/>
+        <start_Time rdf:datatype="&xsd;dateTime">13:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;integer">2</has_Duration>
+        <has_Fees rdf:datatype="&xsd;boolean">false</has_Fees>
+        <has_Food rdf:datatype="&xsd;boolean">true</has_Food>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Chinese_New_Year_Celebration -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Chinese_New_Year_Celebration">
+        <rdf:type rdf:resource="&untitled-ontology-18;Cultural"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;OnCampus"/>
+        <has_Duration rdf:datatype="&xsd;integer">1</has_Duration>
+        <start_Time rdf:datatype="&xsd;dateTime">13:00</start_Time>
+        <has_Food rdf:datatype="&xsd;boolean">true</has_Food>
+        <has_Fees rdf:datatype="&xsd;boolean">true</has_Fees>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#ClarkCenter -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;ClarkCenter">
+        <rdf:type rdf:resource="&untitled-ontology-18;Building"/>
+        <has_Auditorium rdf:datatype="&xsd;integer">4</has_Auditorium>
+        <reach_By rdf:datatype="&xsd;string">Comet_Cab</reach_By>
+        <conducts rdf:resource="&untitled-ontology-18;Golden_Key_Officers_Meeting"/>
+        <conducts rdf:resource="&untitled-ontology-18;Texas_Party"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Delta_Tau_Delta_Chapter_Meeting -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Delta_Tau_Delta_Chapter_Meeting">
+        <rdf:type rdf:resource="&untitled-ontology-18;FraternityMeets"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;OnCampus"/>
+        <start_Time rdf:datatype="&xsd;dateTime">16:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;string">30Minutes</has_Duration>
+        <has_Fees rdf:datatype="&xsd;boolean">false</has_Fees>
+        <has_Food rdf:datatype="&xsd;boolean">true</has_Food>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#ETS_Workshop -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;ETS_Workshop">
+        <rdf:type rdf:resource="&untitled-ontology-18;Informational"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;OffCampus"/>
+        <has_Duration rdf:datatype="&xsd;integer">1</has_Duration>
+        <start_Time rdf:datatype="&xsd;dateTime">14:00</start_Time>
+        <has_Food rdf:datatype="&xsd;boolean">false</has_Food>
+        <has_Fees rdf:datatype="&xsd;boolean">false</has_Fees>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#ErikJonsonn -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;ErikJonsonn">
+        <rdf:type rdf:resource="&untitled-ontology-18;Building"/>
+        <has_Auditorium rdf:datatype="&xsd;integer">2</has_Auditorium>
+        <reach_By rdf:datatype="&xsd;string">Foot</reach_By>
+        <conducts rdf:resource="&untitled-ontology-18;Formatting_Excel"/>
+        <conducts rdf:resource="&untitled-ontology-18;JAVA_App_Contest"/>
+        <conducts rdf:resource="&untitled-ontology-18;Learn_PERL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Formatting_Excel -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Formatting_Excel">
+        <rdf:type rdf:resource="&untitled-ontology-18;OnCampus"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;Workshop"/>
+        <start_Time rdf:datatype="&xsd;dateTime">16:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;integer">2</has_Duration>
+        <has_Food rdf:datatype="&xsd;boolean">false</has_Food>
+        <has_Fees rdf:datatype="&xsd;boolean">false</has_Fees>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#FoundersNorth -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;FoundersNorth">
+        <rdf:type rdf:resource="&untitled-ontology-18;Building"/>
+        <has_Auditorium rdf:datatype="&xsd;integer">6</has_Auditorium>
+        <reach_By rdf:datatype="&xsd;string">Comet_Cab</reach_By>
+        <conducts rdf:resource="&untitled-ontology-18;Chinese_New_Year_Celebration"/>
+        <conducts rdf:resource="&untitled-ontology-18;Preview_Friday"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#GMAT_Prep_Course -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;GMAT_Prep_Course">
+        <rdf:type rdf:resource="&untitled-ontology-18;OnCampus"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;Workshop"/>
+        <start_Time rdf:datatype="&xsd;dateTime">15:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;integer">5</has_Duration>
+        <has_Food rdf:datatype="&xsd;boolean">false</has_Food>
+        <has_Fees rdf:datatype="&xsd;boolean">true</has_Fees>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Golden_Key_Officers_Meeting -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Golden_Key_Officers_Meeting">
+        <rdf:type rdf:resource="&untitled-ontology-18;FraternityMeets"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;OnCampus"/>
+        <has_Duration rdf:datatype="&xsd;integer">1</has_Duration>
+        <start_Time rdf:datatype="&xsd;dateTime">15:00</start_Time>
+        <has_Fees rdf:datatype="&xsd;boolean">false</has_Fees>
+        <has_Food rdf:datatype="&xsd;boolean">true</has_Food>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#GreenHall -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;GreenHall">
+        <rdf:type rdf:resource="&untitled-ontology-18;Building"/>
+        <has_Auditorium rdf:datatype="&xsd;integer">5</has_Auditorium>
+        <reach_By rdf:datatype="&xsd;string">Foot</reach_By>
+        <conducts rdf:resource="&untitled-ontology-18;Alpha_Phi_Theta_Fellowship"/>
+        <conducts rdf:resource="&untitled-ontology-18;Delta_Tau_Delta_Chapter_Meeting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Happy -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Happy">
+        <rdf:type rdf:resource="&untitled-ontology-18;Happy"/>
+        <attend rdf:resource="&untitled-ontology-18;Bhangra_Night"/>
+        <attend rdf:resource="&untitled-ontology-18;Chinese_New_Year_Celebration"/>
+        <attend rdf:resource="&untitled-ontology-18;ETS_Workshop"/>
+        <attend rdf:resource="&untitled-ontology-18;ISA_Diwali"/>
+        <attend rdf:resource="&untitled-ontology-18;Model_Based_Simulation_For_CyberThreat"/>
+        <attend rdf:resource="&untitled-ontology-18;OPT_Workshop"/>
+        <attend rdf:resource="&untitled-ontology-18;St_Louis_Day_Celebration"/>
+        <attend rdf:resource="&untitled-ontology-18;State_Farm_Intern_Fair"/>
+        <attend rdf:resource="&untitled-ontology-18;Texas_Party"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Helpful -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Helpful">
+        <rdf:type rdf:resource="&untitled-ontology-18;Helpful"/>
+        <attend rdf:resource="&untitled-ontology-18;Animal_Shelter_Drive"/>
+        <attend rdf:resource="&untitled-ontology-18;Bronies_UTD_Meet"/>
+        <attend rdf:resource="&untitled-ontology-18;Catch_Comet_pride_Series"/>
+        <attend rdf:resource="&untitled-ontology-18;Preview_Friday"/>
+        <attend rdf:resource="&untitled-ontology-18;Radio_UTD_Volunteering"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#ISA_Diwali -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;ISA_Diwali">
+        <rdf:type rdf:resource="&untitled-ontology-18;Cultural"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;OnCampus"/>
+        <start_Time rdf:datatype="&xsd;dateTime">19:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;integer">4</has_Duration>
+        <has_Food rdf:datatype="&xsd;boolean">true</has_Food>
+        <has_Fees rdf:datatype="&xsd;boolean">true</has_Fees>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#JAVA_App_Contest -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;JAVA_App_Contest">
+        <rdf:type rdf:resource="&untitled-ontology-18;Contest"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;OnCampus"/>
+        <start_Time rdf:datatype="&xsd;dateTime">15:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;string">6Hours</has_Duration>
+        <has_Fees rdf:datatype="&xsd;boolean">false</has_Fees>
+        <has_Food rdf:datatype="&xsd;boolean">false</has_Food>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#JSOM -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;JSOM">
+        <rdf:type rdf:resource="&untitled-ontology-18;Building"/>
+        <has_Auditorium rdf:datatype="&xsd;integer">3</has_Auditorium>
+        <reach_By rdf:datatype="&xsd;string">Foot</reach_By>
+        <conducts rdf:resource="&untitled-ontology-18;Android_Beginner_Workshop"/>
+        <conducts rdf:resource="&untitled-ontology-18;GMAT_Prep_Course"/>
+        <conducts rdf:resource="&untitled-ontology-18;ISA_Diwali"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Learn_PERL -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Learn_PERL">
+        <rdf:type rdf:resource="&untitled-ontology-18;OnCampus"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;Workshop"/>
+        <start_Time rdf:datatype="&xsd;dateTime">13:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;string">4Hours</has_Duration>
+        <has_Food rdf:datatype="&xsd;boolean">true</has_Food>
+        <has_Fees rdf:datatype="&xsd;boolean">true</has_Fees>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Living_Water_Student_Fellowship_Meet -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Living_Water_Student_Fellowship_Meet">
+        <rdf:type rdf:resource="&untitled-ontology-18;FraternityMeets"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;OffCampus"/>
+        <start_Time rdf:datatype="&xsd;dateTime">09:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;integer">2</has_Duration>
+        <has_Fees rdf:datatype="&xsd;boolean">true</has_Fees>
+        <has_Food rdf:datatype="&xsd;boolean">true</has_Food>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#McDermottLibrary -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;McDermottLibrary">
+        <rdf:type rdf:resource="&untitled-ontology-18;Building"/>
+        <has_Auditorium rdf:datatype="&xsd;integer">0</has_Auditorium>
+        <reach_By rdf:datatype="&xsd;string">Foot</reach_By>
+        <conducts rdf:resource="&untitled-ontology-18;Catch_Comet_pride_Series"/>
+        <conducts rdf:resource="&untitled-ontology-18;OPT_Workshop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Model_Based_Simulation_For_CyberThreat -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Model_Based_Simulation_For_CyberThreat">
+        <rdf:type rdf:resource="&untitled-ontology-18;Informational"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;OnCampus"/>
+        <start_Time rdf:datatype="&xsd;dateTime">10:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;string">1:30Hours</has_Duration>
+        <has_Fees rdf:datatype="&xsd;boolean">true</has_Fees>
+        <has_Food rdf:datatype="&xsd;boolean">true</has_Food>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Neutral -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Neutral">
+        <rdf:type rdf:resource="&untitled-ontology-18;Neutral"/>
+        <attend rdf:resource="&untitled-ontology-18;Alpha_Kappa_Psi_Induction_Ceremony"/>
+        <attend rdf:resource="&untitled-ontology-18;Alpha_Phi_Theta_Fellowship"/>
+        <attend rdf:resource="&untitled-ontology-18;Android_Beginner_Workshop"/>
+        <attend rdf:resource="&untitled-ontology-18;Animal_Shelter_Drive"/>
+        <attend rdf:resource="&untitled-ontology-18;Bhangra_Night"/>
+        <attend rdf:resource="&untitled-ontology-18;Bronies_UTD_Meet"/>
+        <attend rdf:resource="&untitled-ontology-18;Catch_Comet_pride_Series"/>
+        <attend rdf:resource="&untitled-ontology-18;Chinese_New_Year_Celebration"/>
+        <attend rdf:resource="&untitled-ontology-18;Delta_Tau_Delta_Chapter_Meeting"/>
+        <attend rdf:resource="&untitled-ontology-18;ETS_Workshop"/>
+        <attend rdf:resource="&untitled-ontology-18;Formatting_Excel"/>
+        <attend rdf:resource="&untitled-ontology-18;GMAT_Prep_Course"/>
+        <attend rdf:resource="&untitled-ontology-18;Golden_Key_Officers_Meeting"/>
+        <attend rdf:resource="&untitled-ontology-18;ISA_Diwali"/>
+        <attend rdf:resource="&untitled-ontology-18;JAVA_App_Contest"/>
+        <attend rdf:resource="&untitled-ontology-18;Learn_PERL"/>
+        <attend rdf:resource="&untitled-ontology-18;Living_Water_Student_Fellowship_Meet"/>
+        <attend rdf:resource="&untitled-ontology-18;Model_Based_Simulation_For_CyberThreat"/>
+        <attend rdf:resource="&untitled-ontology-18;OPT_Workshop"/>
+        <attend rdf:resource="&untitled-ontology-18;Preview_Friday"/>
+        <attend rdf:resource="&untitled-ontology-18;RUBY_On_Rails_Contest"/>
+        <attend rdf:resource="&untitled-ontology-18;Radio_UTD_Volunteering"/>
+        <attend rdf:resource="&untitled-ontology-18;St_Louis_Day_Celebration"/>
+        <attend rdf:resource="&untitled-ontology-18;State_Farm_Intern_Fair"/>
+        <attend rdf:resource="&untitled-ontology-18;Texas_Party"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#OPT_Workshop -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;OPT_Workshop">
+        <rdf:type rdf:resource="&untitled-ontology-18;Informational"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;OnCampus"/>
+        <has_Duration rdf:datatype="&xsd;integer">1</has_Duration>
+        <start_Time rdf:datatype="&xsd;dateTime">15:00</start_Time>
+        <has_Food rdf:datatype="&xsd;boolean">false</has_Food>
+        <has_Fees rdf:datatype="&xsd;boolean">false</has_Fees>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Peaceful -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Peaceful">
+        <rdf:type rdf:resource="&untitled-ontology-18;Peaceful"/>
+        <attend rdf:resource="&untitled-ontology-18;Alpha_Kappa_Psi_Induction_Ceremony"/>
+        <attend rdf:resource="&untitled-ontology-18;Alpha_Phi_Theta_Fellowship"/>
+        <attend rdf:resource="&untitled-ontology-18;Delta_Tau_Delta_Chapter_Meeting"/>
+        <attend rdf:resource="&untitled-ontology-18;Golden_Key_Officers_Meeting"/>
+        <attend rdf:resource="&untitled-ontology-18;Living_Water_Student_Fellowship_Meet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Preview_Friday -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Preview_Friday">
+        <rdf:type rdf:resource="&untitled-ontology-18;OnCampus"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;Volunteer"/>
+        <start_Time rdf:datatype="&xsd;dateTime">16:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;integer">4</has_Duration>
+        <has_Fees rdf:datatype="&xsd;boolean">false</has_Fees>
+        <has_Food rdf:datatype="&xsd;boolean">false</has_Food>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#RUBY_On_Rails_Contest -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;RUBY_On_Rails_Contest">
+        <rdf:type rdf:resource="&untitled-ontology-18;Contest"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;OffCampus"/>
+        <start_Time rdf:datatype="&xsd;dateTime">17:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;integer">7</has_Duration>
+        <has_Fees rdf:datatype="&xsd;boolean">false</has_Fees>
+        <has_Food rdf:datatype="&xsd;boolean">true</has_Food>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Radio_UTD_Volunteering -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Radio_UTD_Volunteering">
+        <rdf:type rdf:resource="&untitled-ontology-18;OnCampus"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;Volunteer"/>
+        <start_Time rdf:datatype="&xsd;dateTime">10:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;string">3:30Hours</has_Duration>
+        <has_Fees rdf:datatype="&xsd;boolean">false</has_Fees>
+        <has_Food rdf:datatype="&xsd;boolean">false</has_Food>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#St_Louis_Day_Celebration -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;St_Louis_Day_Celebration">
+        <rdf:type rdf:resource="&untitled-ontology-18;Cultural"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;OffCampus"/>
+        <start_Time rdf:datatype="&xsd;dateTime">11:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;integer">5</has_Duration>
+        <has_Food rdf:datatype="&xsd;boolean">false</has_Food>
+        <has_Fees rdf:datatype="&xsd;boolean">false</has_Fees>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#State_Farm_Intern_Fair -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;State_Farm_Intern_Fair">
+        <rdf:type rdf:resource="&untitled-ontology-18;Informational"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;OnCampus"/>
+        <start_Time rdf:datatype="&xsd;dateTime">13:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;string">4Hours</has_Duration>
+        <has_Fees rdf:datatype="&xsd;boolean">false</has_Fees>
+        <has_Food rdf:datatype="&xsd;boolean">true</has_Food>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Studious -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Studious">
+        <rdf:type rdf:resource="&untitled-ontology-18;Studious"/>
+        <attend rdf:resource="&untitled-ontology-18;Android_Beginner_Workshop"/>
+        <attend rdf:resource="&untitled-ontology-18;Formatting_Excel"/>
+        <attend rdf:resource="&untitled-ontology-18;GMAT_Prep_Course"/>
+        <attend rdf:resource="&untitled-ontology-18;JAVA_App_Contest"/>
+        <attend rdf:resource="&untitled-ontology-18;Learn_PERL"/>
+        <attend rdf:resource="&untitled-ontology-18;RUBY_On_Rails_Contest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kanikakapoor/ontologies/2015/4/untitled-ontology-18#Texas_Party -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-18;Texas_Party">
+        <rdf:type rdf:resource="&untitled-ontology-18;Cultural"/>
+        <rdf:type rdf:resource="&untitled-ontology-18;OnCampus"/>
+        <start_Time rdf:datatype="&xsd;dateTime">19:00</start_Time>
+        <has_Duration rdf:datatype="&xsd;integer">2</has_Duration>
+        <has_Fees rdf:datatype="&xsd;boolean">false</has_Fees>
+        <has_Food rdf:datatype="&xsd;boolean">true</has_Food>
+        <rdfs:comment>This is a cultural event</rdfs:comment>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
