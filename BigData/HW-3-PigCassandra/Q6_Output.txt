@@ -1,0 +1,14 @@
+ review_id              | user_id                | business_id            | stars
+------------------------+------------------------+------------------------+-------
+ c52id28JfbE4-Wp0MlD8cQ | AsD5seybLgfPndqitCENzQ | WSTdK7y1ZDw9JU3NUpFj7g |   4.0
+ LtqQNvu-zrvB97ILQNpmSg | 4sZHlDDcGttC43wQMBEvYQ | ksRoyJsttIQnTt_nMk--GA |   4.0
+ YkE30xOIZQY9DL27Qb7TRg | sYe2j45AMzHs9lsZEBP87g | A6p0E-nFupEjDKpKx45CIQ |   4.0
+ 0ITcKjVpl-GH94RADuu7Dg | x8yFaFCE-M0xEjWFKc9zdA | 3rfoWwB2LsG6TSbmKk3C-w |   4.0
+ XOgogN2ZRhzzkZxdMPtDMA | GgxEfadUXGZ9LBwj9voNRw | BTOz5Mmq-nJC92ck48vjKA |   4.0
+ fbbGddbkjRNgmjH6iwq5rw | 8uxM42p7cksj13vjHGy6Pg | xihWs_RmaKUkJgdXwFxtAg |   4.0
+ R5UhY-GZWauhuS7Xs1CRdQ | umCHmDI-cFxR69AJG5-Y0w | O8HKmULXu900le6SK1EuWQ |   4.0
+ iBHbrcJzsRM10d2HEM_Wog | Qg_sWtFpMwLeGlqO5dECpg | Cs7Jj_7dGq79GJ7JsqFb8w |   4.0
+ WN5II0fRLckcEg7dUHDRSg | _kaF-OlekgsphJuv8fwFzg | CRcg6WtbcTXXtBvwfF3XTw |   4.0
+ 1dVm4xzFb2svrpS0jWHjZg | TiPH2ZwSX53uK7IvFSHVYg | RBXaH7_Cu3XxJ6O27Q0UTQ |   4.0
+
+(10 rows)

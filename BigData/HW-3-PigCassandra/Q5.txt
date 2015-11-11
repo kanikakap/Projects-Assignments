@@ -1,0 +1,44 @@
+Q5: Cassandra CQL3
+{cs6360:~} /usr/local/apache-cassandra-2.0.5/bin/cqlsh  csac0
+
+Requirements:
+Using Cassandra CQL3, write commands to do the following:
+1- Create a table for business.csv dataset. Use (business_id) as the Primary Key.
+2- Load all records in the dataset to this table.
+3- Select the tuple which has business id  'HPWmjuivv3xJ279qSVfNaQ'
+4- Delete all rows in the table.
+5- Drop the table.
+
+
+Solution-
+
+To start Cassandra - 
+{cs6360:~} /usr/local/apache-cassandra-2.0.5/bin/cqlsh  csac0
+
+//Creating Keyspace-
+CREATE KEYSPACE kxk140230 WITH  REPLICATION = {'class' :'SimpleStrategy', 'replication_factor' : 1};
+
+//use keyspace
+USE kxk140230;
+
+//create new table with following columns
+CREATE TABLE businesstable
+(
+business_id varchar,
+full_address varchar,
+categories text, 
+PRIMARY KEY (business_id)
+);
+
+//Load all records into Table from business.csv
+COPY kxk140230.businesstable(business_id,full_address,categories) FROM 'business.csv' WITH DELIMITER ='^';
+
+//select tuples with business_id= 'HPWmjuivv3xJ279qSVfNaQ'
+SELECT * FROM businesstable WHERE business_id= 'HPWmjuivv3xJ279qSVfNaQ';
+
+//delete all rows from table
+TRUNCATE businesstable;
+
+//Drop Table
+DROP TABLE businesstable;
+

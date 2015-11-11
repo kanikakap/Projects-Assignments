@@ -1,0 +1,97 @@
+Question2. 
+a. Start spark-shell in local mode using all the processor cores on your system or the cluster. (Very important) 
+List the business_id of the Top 10 businesses using the average ratings. This will require you to use review.csv. Please answer the question by calculating the average ratings given to each business using the review.csv file. Next, sort the output based on the business_id before taking the top 10 businesses using the average ratings. 
+
+
+Solution Script:
+
+
+COMMAND -> spark-shell --executor-cores 8
+
+var file = sc.textFile("/yelpdatafall/review/review.csv")
+
+def funct1[T]( t: Iterable[T] )( implicit num: Numeric[T] ) = {
+     num.toDouble( t.sum ) / t.size
+     }
+
+var mapfile  = file.map(a => a.split("\\^")).map(b => (b(2),b(3).toDouble)).groupByKey()
+
+val sorted = mapfile.map(a => (a._1, funct1 (a._2))).sortByKey()
+
+val output =sorted.map(a => (a._2, a._1)). top(10).foreach(println)
+
+Time - 2.348901 s
+
+
+Output:
+
+(5.0,zx1lLUvlRUN5nQlSj3HRDw)
+(5.0,zweAzZDJ8SfwUID1UEGkbA)
+(5.0,zvo21oKr656PQNVblYxYlg)
+(5.0,ztswDToyZGyL_dxo0CEQew)
+(5.0,zrmO-d-Mw3kv9dWa7Trr9Q)
+(5.0,zqZjrcTf9Bc7r_VLGN4mrw)
+(5.0,zkD9AtBT9ZkLFiV31gvEGw)
+(5.0,ziS_fZ7Z99fa4qNVr879vg)
+(5.0,zh2Eja5h54vM7GUibHoi9A)
+(5.0,zh-MNFY4TyG7x2itUVlESQ)
+output: Unit = ()
+
+
+
+
+——————————————————————————
+
+
+b. Rerun Q2a using Yarn mode. Please solve using our cs6360 cluster. This questions shows how spark can be used on multiple systems in a cluster. 
+Load all the dataset to hadoop cluster as you did in homework1. 
+Use the address of the file on the cluster as input to your scala script. 
+Start spark-shell in YARN mode using Cs6360 spark cluster. 
+This spark cluster consist 6 hadoop machine nodes. Using the following parameters Rerun your scala script from question 2a. 
+Set executor memory =2G 
+executor cores = 6. 
+num-executors = 6 
+For example, the command is as follows. 
+spark-shell --master yarn-client --executor-memory 2G --executor-cores 6 --num-executors 6 
+
+
+Please measure the execution time of your program using the local mode (Q2a )and yarn mode (Q2b). Please compare the measured time. 
+Note: Spark supports only scala or java in YARN mode. 
+
+Solution :
+COMMAND -> spark-shell --master yarn-client --executor-memory 2G --executor-cores 6 --num-executors 6 
+
+var file = sc.textFile("/yelpdatafall/review/review.csv")
+
+def funct1[T]( t: Iterable[T] )( implicit num: Numeric[T] ) = {
+     num.toDouble( t.sum ) / t.size
+     }
+
+var mapfile  = file.map(a => a.split("\\^")).map(b => (b(2),b(3).toDouble)).groupByKey()
+
+val sorted = mapfile.map(a => (a._1, funct1 (a._2))).sortByKey()
+
+val output =sorted.map(a => (a._2, a._1)). top(10).foreach(println)
+
+Time taken - 5.201345 s
+
+Output:
+
+(5.0,zx1lLUvlRUN5nQlSj3HRDw)
+(5.0,zweAzZDJ8SfwUID1UEGkbA)
+(5.0,zvo21oKr656PQNVblYxYlg)
+(5.0,ztswDToyZGyL_dxo0CEQew)
+(5.0,zrmO-d-Mw3kv9dWa7Trr9Q)
+(5.0,zqZjrcTf9Bc7r_VLGN4mrw)
+(5.0,zkD9AtBT9ZkLFiV31gvEGw)
+(5.0,ziS_fZ7Z99fa4qNVr879vg)
+(5.0,zh2Eja5h54vM7GUibHoi9A)
+(5.0,zh-MNFY4TyG7x2itUVlESQ)
+output: Unit = ()
+
+RESULT
+
+Time in Spark-shell - 2.348901 s
+Time in Yarn Mode - 5.201345 s
+
+

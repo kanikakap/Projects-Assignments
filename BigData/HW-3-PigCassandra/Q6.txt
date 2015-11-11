@@ -1,0 +1,47 @@
+Q6: 
+Using Cassandra CQL3, write commands to do the following: 
+1. Create a table for review.csv dataset using the user_id,business_id as the primary key and the stars as the sorting key.
+2. Create index on column stars.
+3. Select any row where the rating is 4.0 limit display result to 10.
+4. Delete all rows in the table
+5. Drop the table.
+
+
+
+Solution
+
+To start Cassandra - 
+{cs6360:~} 
+/usr/local/apache-cassandra-2.0.5/bin/cqlsh csac0
+
+//Creating Keyspace-
+CREATE KEYSPACE kxk140230 WITH REPLICATION = {'class' :'SimpleStrategy', 'replication_factor' : 1};
+
+//use keyspace
+USE kxk140230;
+
+//create new table with following columns
+CREATE TABLE reviewtable3
+(
+review_id varchar,
+user_id varchar,
+business_id varchar, 
+stars decimal,
+PRIMARY KEY ((user_id,business_id),stars)
+) WITH CLUSTERING ORDER BY (stars desc);
+
+//Create index on column stars.
+CREATE INDEX kxk1 on reviewtable3(stars);
+
+//Load data
+COPY kxk140230.reviewtable3(review_id,user_id,business_id,stars) FROM 'review.csv' WITH DELIMITER ='^';
+
+//Select any row where the rating is 4.0 limit display result to 10.
+SELECT * from reviewtable3 WHERE stars=4.0  LIMIT 10 ALLOW FILTERING;
+
+//Delete all rows in the table
+TRUNCATE reviewtable3;
+
+//drop the table
+DROP TABLE reviewtable3;
+

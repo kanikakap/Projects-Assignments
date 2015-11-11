@@ -1,0 +1,25 @@
+Q3
+Using Pig Latin script, Implement co-group command on business_id for the datasets review and business.  Print first 5 rows.
+
+
+
+Solution-
+
+businessFile = LOAD '/kxk140230/busNew' USING PigStorage('^') AS (busID:chararray,fAddress:chararray,categories:chararray);
+
+reviewFile = LOAD '/yelpdatafall/review/review.csv' using PigStorage('^') AS (review_id:chararray,user_id:chararray,busID:chararray,stars:float);
+
+cogroup1 = COGROUP reviewFile by busID, businessFile by busID;
+
+output1 = LIMIT cogroup1 5;
+
+store output1 into '/kxk140230/pigQ3-1' USING PigStorage ('|');
+
+
+
+
+
+
+Check Output-
+hdfs dfs -cat /kxk140230/pigQ3-1/part*
+

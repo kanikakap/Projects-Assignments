@@ -1,0 +1,34 @@
+Q2:
+List the business_id , full address and categories of the top 10 most reviewed businesses not located in CA. Please answer the question by counting the reviews given to each business id not located in CA.
+
+
+
+Solution-
+
+businessFile= LOAD '/kxk140230/busNew' USING PigStorage('^') AS (busID:chararray,fAddress:chararray,categories:chararray);
+
+filteredBusinessID= FILTER businessFile by NOT(fAddress matches'.*CA.*');
+
+reviewFile = LOAD '/yelpdatafall/review/review.csv' USING PigStorage('^') AS (review_id:chararray,user_id:chararray,busID:chararray,stars:float);
+
+join_columns= JOIN filteredBusinessID by busID, reviewFile by busID;
+
+groupReview = GROUP reviewFile by busID;
+
+avgStars = FOREACH groupReview generate group as busID, AVG($1.stars) AS ratingsAvg;
+
+joinBusinessReview = JOIN filteredBusinessID by busID, avgStars by busID;
+
+filteredBR = FILTER joinBusinessReview by fAddress is not null and categories is not null;
+
+busID_sorted = ORDER filteredBR by ratingsAvg DESC;
+
+outputBusinessID= LIMIT busID_sorted 10;
+store outputBusinessID into '/kxk140230/pigQ2-2' USING PigStorage ('|'); 
+
+//dump outputBusinessID;
+
+Check Output- 
+hdfs dfs -cat /kxk140230/pigQ2-2
+hdfs dfs -cat /kxk140230/pigQ2-2/part*
+

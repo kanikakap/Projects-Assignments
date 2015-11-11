@@ -1,0 +1,18 @@
+Q7: Cassandra Administration
+1) Run nodetool command and determine how much unbalanced the cluster is.
+
+
+
+Solution-
+
+ /usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac0 ring  kxk140230 ;
+ /usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac0 status kxk140230;
+
+ /usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac1 ring  kxk140230 ;
+ /usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac1 status kxk140230;
+
+ /usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac2 ring  kxk140230 ;
+ /usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac2 status kxk140230;
+
+ /usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac3 ring  kxk140230 ;
+ /usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac3 status kxk140230;

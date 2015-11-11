@@ -1,0 +1,7 @@
+{cs6360:~} hdfs dfs -cat /kxk140230/pigQ4-1/part*
+dL6wkEQaV2dILUc0IgbVNA|3x8lZ-EoBhg-mw21BRITuQ|--3iH7ezDwTGn5lolFMdhg|3.0|--3iH7ezDwTGn5lolFMdhg|201 South Estes DriveChapel Hill, NC 27514|List(Arts & Entertainment, Shopping, Arts & Crafts, Art Galleries, Antiques, Event Planning & Services, Cards & Stationery, Flowers & Gifts)
+6_YbOOpTCmilmDvxvM8ibw|w4xul4H66RB3zXnn9i3FzA|--3iH7ezDwTGn5lolFMdhg|3.0|--3iH7ezDwTGn5lolFMdhg|201 South Estes DriveChapel Hill, NC 27514|List(Arts & Entertainment, Shopping, Arts & Crafts, Art Galleries, Antiques, Event Planning & Services, Cards & Stationery, Flowers & Gifts)
+VpFzhSAp_lqJcoNkMD1WhQ|PnvmYnd8V2VUV6mZtZCDsg|--3iH7ezDwTGn5lolFMdhg|5.0|--3iH7ezDwTGn5lolFMdhg|201 South Estes DriveChapel Hill, NC 27514|List(Arts & Entertainment, Shopping, Arts & Crafts, Art Galleries, Antiques, Event Planning & Services, Cards & Stationery, Flowers & Gifts)
+ROhssA2WRvs-YLh8rMt8Rw|YrugcPqjHGVkrSXpozDowg|--3iH7ezDwTGn5lolFMdhg|4.0|--3iH7ezDwTGn5lolFMdhg|201 South Estes DriveChapel Hill, NC 27514|List(Arts & Entertainment, Shopping, Arts & Crafts, Art Galleries, Antiques, Event Planning & Services, Cards & Stationery, Flowers & Gifts)
+cGxCjYkVaLzxaToU1Vxzhw|ka7KtME7TQ53RzyNTMeqSw|--3iH7ezDwTGn5lolFMdhg|4.0|--3iH7ezDwTGn5lolFMdhg|201 South Estes DriveChapel Hill, NC 27514|List(Arts & Entertainment, Shopping, Arts & Crafts, Art Galleries, Antiques, Event Planning & Services, Cards & Stationery, Flowers & Gifts)
+{cs6360:~} 

@@ -1,0 +1,79 @@
+Question - 3
+List the business_id , full address and categories of the Top 10 businesses using the average ratings.Use the files business.csv and review.csv.Please sort the output based on the business_id before taking the top 10 business using the average ratings.
+
+
+Solution - 
+
+var bfile= sc.textFile("/yelpdatafall/business/business.csv").map(l => l.split("\\^")).map(l => (l(0),(l(1),l(2))))
+
+var rfile = sc.textFile("/yelpdatafall/review/review.csv")
+
+var rfilemap = rfile.map(a => a.split("\\^")).map(a => (a(2),a(3).toDouble)).groupByKey()
+
+
+def funct1[T]( a: Iterable[T] )( implicit num: Numeric[T] ) = {
+     num.toDouble( a.sum ) / a.size
+     }     	
+val rate1 = rFileMap.map(x => (x._1, funct1(x._2))).sortByKey()
+val rate2 = rate1.map(x => (x._2, x._1)). top(10).map(x=>(x._2,x._1))
+var output = sc.parallelize(rate2)
+bfile.join(output).collect().foreach(println)
+
+Time taken - 1.231282 s
+
+
+Question 3b:Using broadcast variable in spark to store the business data, re implementyour solution to question 3a.Please measure the execution time of your program when using spark RDD (Q3a )and when using Broadcast variable (Q3b). Please compare the measured time.
+
+Solution- 
+
+var bfile= sc.textFile("/yelpdatafall/business/business.csv").map(l => l.split("\\^")).map(l => (l(0),(l(1),l(2))))
+
+var rfile = sc.textFile("/yelpdatafall/review/review.csv")
+
+var rfilemap = rfile.map(a => a.split("\\^")).map(a => (a(2),a(3).toDouble)).groupByKey()
+
+
+def funct1[T]( a: Iterable[T] )( implicit num: Numeric[T] ) = {
+     num.toDouble( a.sum ) / a.size
+     }     	
+
+
+val rate1 = rfilemap.map(l => (x._1, funct1(x._2))).sortByKey()
+
+val rate2 = rate1.map(x => (x._2, x._1)). top(10).map(x=>(x._2,x._1))
+
+var outputbroadcastvar = sc.broadcast(rate2)
+
+bfile.map{j => if(outputbroadcastvar.value.contains(j._1)) j else None}.filter(j=>j!=(None)).collect().foreach(println)
+
+Time taken by broadcast variable- 0.561728 s
+
+Output-
+(ztswDToyZGyL_dxo0CEQew,((200 W SenecaIthaca, NY 14850,List(Food, Ice Cream & Frozen Yogurt)),5.0))
+(ztswDToyZGyL_dxo0CEQew,((200 W SenecaIthaca, NY 14850,List(Food, Ice Cream & Frozen Yogurt)),5.0))
+(zh2Eja5h54vM7GUibHoi9A,((275 Westminster StDownCityProvidence, RI 02903,List(Art Supplies, Shopping, Arts & Crafts)),5.0))
+(zh2Eja5h54vM7GUibHoi9A,((275 Westminster StDownCityProvidence, RI 02903,List(Art Supplies, Shopping, Arts & Crafts)),5.0))
+(zkD9AtBT9ZkLFiV31gvEGw,((194 Waterman St3rd FlProvidence, RI 02906,List(Massage, Beauty and Spas)),5.0))
+(zkD9AtBT9ZkLFiV31gvEGw,((194 Waterman St3rd FlProvidence, RI 02906,List(Massage, Beauty and Spas)),5.0))
+(zrmO-d-Mw3kv9dWa7Trr9Q,((1101 Welch RdSte A1Palo Alto, CA 94304,List(Doctors, Health and Medical, Pediatricians)),5.0))
+(zrmO-d-Mw3kv9dWa7Trr9Q,((1101 Welch RdSte A1Palo Alto, CA 94304,List(Doctors, Health and Medical, Pediatricians)),5.0))
+(zx1lLUvlRUN5nQlSj3HRDw,((282 River StTroy, NY 12180,List(Shopping, Antiques)),5.0))
+(zx1lLUvlRUN5nQlSj3HRDw,((282 River StTroy, NY 12180,List(Shopping, Antiques)),5.0))
+(zqZjrcTf9Bc7r_VLGN4mrw,((1734 Elton Rd Ste 104Silver Spring, MD 20903,List(Doctors, Ear Nose & Throat, Health and Medical)),5.0))
+(zqZjrcTf9Bc7r_VLGN4mrw,((1734 Elton Rd Ste 104Silver Spring, MD 20903,List(Doctors, Ear Nose & Throat, Health and Medical)),5.0))
+(ziS_fZ7Z99fa4qNVr879vg,((141 The CommonsSte 3Ithaca, NY 14850,List(Day Spas, Massage, Beauty and Spas)),5.0))
+(ziS_fZ7Z99fa4qNVr879vg,((141 The CommonsSte 3Ithaca, NY 14850,List(Day Spas, Massage, Beauty and Spas)),5.0))
+(zh-MNFY4TyG7x2itUVlESQ,((University DistrictSeattle, WA 98145,List(Home Services, Home Inspectors)),5.0))
+(zh-MNFY4TyG7x2itUVlESQ,((University DistrictSeattle, WA 98145,List(Home Services, Home Inspectors)),5.0))
+(zweAzZDJ8SfwUID1UEGkbA,((701 Main StLafayette, IN 47901,List(Local Services, Printing Services)),5.0))
+(zweAzZDJ8SfwUID1UEGkbA,((701 Main StLafayette, IN 47901,List(Local Services, Printing Services)),5.0))
+(zvo21oKr656PQNVblYxYlg,((150 E Tenth StClaremont, CA 91711,List(Colleges & Universities, Education)),5.0))
+(zvo21oKr656PQNVblYxYlg,((150 E Tenth StClaremont, CA 91711,List(Colleges & Universities, Education)),5.0))
+
+
+
+RESULT
+
+Time taken 3a- 1.231282 s
+Time taken 3b- 0.561728 s
+

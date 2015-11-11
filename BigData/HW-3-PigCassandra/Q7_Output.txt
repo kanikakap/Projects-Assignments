@@ -1,0 +1,59 @@
+*******************--csac0--*********************
+
+{cs6360:~}  /usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac0 status kxk140230;
+Datacenter: datacenter1
+=======================
+Status=Up/Down
+|/ State=Normal/Leaving/Joining/Moving
+--  Address       Load       Tokens  Owns (effective)  Host ID                               Rack
+UN  10.176.92.94  206.24 MB  256     23.4%             d4b9544b-37ef-4421-ab65-026eb889e37d  rack1
+UN  10.176.92.91  180.33 MB  256     25.0%             f402386c-f200-489c-ba35-d37b2b880b82  rack1
+UN  10.176.92.92  189.36 MB  256     26.3%             29838b5d-1523-43fe-b6ff-e357a8995861  rack1
+UN  10.176.92.93  185.12 MB  256     25.4%             67080a87-dbf3-4fe2-84a0-d3ad4a9d6585  rack1
+{cs6360:~} 
+
+
+*******************--csac1--*********************
+
+
+{cs6360:~}  /usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac1 status kxk140230;
+Datacenter: datacenter1
+=======================
+Status=Up/Down
+|/ State=Normal/Leaving/Joining/Moving
+--  Address       Load       Tokens  Owns (effective)  Host ID                               Rack
+UN  10.176.92.94  206.24 MB  256     23.4%             d4b9544b-37ef-4421-ab65-026eb889e37d  rack1
+UN  10.176.92.91  180.33 MB  256     25.0%             f402386c-f200-489c-ba35-d37b2b880b82  rack1
+UN  10.176.92.92  196.16 MB  256     26.3%             29838b5d-1523-43fe-b6ff-e357a8995861  rack1
+UN  10.176.92.93  191.88 MB  256     25.4%             67080a87-dbf3-4fe2-84a0-d3ad4a9d6585  rack1
+
+
+*******************--csac2--*********************
+
+
+{cs6360:~}  /usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac2 status kxk140230;
+Datacenter: datacenter1
+=======================
+Status=Up/Down
+|/ State=Normal/Leaving/Joining/Moving
+--  Address       Load       Tokens  Owns (effective)  Host ID                               Rack
+UN  10.176.92.94  224.7 MB   256     23.4%             d4b9544b-37ef-4421-ab65-026eb889e37d  rack1
+UN  10.176.92.91  187.02 MB  256     25.0%             f402386c-f200-489c-ba35-d37b2b880b82  rack1
+UN  10.176.92.92  196.16 MB  256     26.3%             29838b5d-1523-43fe-b6ff-e357a8995861  rack1
+UN  10.176.92.93  191.88 MB  256     25.4%             67080a87-dbf3-4fe2-84a0-d3ad4a9d6585  rack1
+{cs6360:~} 
+
+*******************--csac3--*********************
+
+
+{cs6360:~}  /usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac3 status kxk140230;
+Datacenter: datacenter1
+=======================
+Status=Up/Down
+|/ State=Normal/Leaving/Joining/Moving
+--  Address       Load       Tokens  Owns (effective)  Host ID                               Rack
+UN  10.176.92.94  224.72 MB  256     23.4%             d4b9544b-37ef-4421-ab65-026eb889e37d  rack1
+UN  10.176.92.91  187 MB     256     25.0%             f402386c-f200-489c-ba35-d37b2b880b82  rack1
+UN  10.176.92.92  196.15 MB  256     26.3%             29838b5d-1523-43fe-b6ff-e357a8995861  rack1
+UN  10.176.92.93  191.88 MB  256     25.4%             67080a87-dbf3-4fe2-84a0-d3ad4a9d6585  rack1
+{cs6360:~} 

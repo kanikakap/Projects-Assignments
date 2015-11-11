@@ -1,0 +1,35 @@
+Q1:
+
+List the business_id , full address and categories of the Top 10 businesses located in CA using the average ratings. This will require you to use  review.csv and business.csv files.
+
+Please answer the question by calculating the average ratings given to each business using the
+review.csv file. Do not use the already calculated ratings (average_stars) contained in the
+business entity rows.
+
+Solution-
+
+businessFile= LOAD '/kxk140230/busNew' USING PigStorage('^') AS (busID:chararray,fAddress:chararray,categories:chararray);
+
+filteredBusinessID= FILTER businessFile by(fAddress matches'.*CA.*');
+
+reviewFile = LOAD '/yelpdatafall/review/review.csv' USING PigStorage('^') AS (review_id:chararray,user_id:chararray,busID:chararray,stars:float);
+
+join_columns= JOIN filteredBusinessID by busID, reviewFile by busID;
+
+groupReview = GROUP reviewFile by busID;
+
+avgStars = FOREACH groupReview generate group as busID, AVG($1.stars) AS ratingsAvg;
+
+joinBusinessReview = JOIN filteredBusinessID by busID, avgStars by busID;
+
+filteredBR = FILTER joinBusinessReview by fAddress is not null and categories is not null;
+
+busID_sorted = ORDER filteredBR by ratingsAvg DESC;
+
+outputBusinessID= LIMIT busID_sorted 10;
+STORE outputBusinessID into '/kxk140230/pigQ1' using PigStorage ('|');
+
+
+
+Check Output-
+hdfs dfs -cat /kxk140230/pigQ1/part*

@@ -1,0 +1,27 @@
+Q4:
+Repeat Question 2 (implement join) with co-group commands. Print first 5 rows.
+
+
+
+Solution-
+businessFile= LOAD '/kxk140230/busNew' USING PigStorage('^') AS (busID:chararray,fAddress:chararray,categories:chararray);
+
+filterCA = FILTER businessFile by NOT(fAddress matches'.*CA.*');
+
+reviewFile = LOAD '/yelpdatafall/review/review.csv' USING PigStorage('^') AS (review_id:chararray,user_id:chararray,busID:chararray,stars:float);
+
+coGroup1 = COGROUP reviewFile by busID INNER, filterCA by busID;
+
+coGroupLimit = LIMIT coGroup1 5;
+
+output1= FOREACH coGroupLimit GENERATE FLATTEN(reviewFile),FLATTEN(filterCA);
+
+output2 = LIMIT output1 5;
+
+store output2 into '/kxk140230/pigQ4-1' USING PigStorage ('|');
+
+
+
+
+Check Output-
+hdfs dfs -cat /kxk140230/pigQ4-1/part*
