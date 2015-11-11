@@ -1,0 +1,22 @@
+Part I Exploratory Data Analysis
+
+
+Question - 1 
+Write a short note on the distribution of the variables that you observe from the plots. Are they normally distributed?
+
+Answer-
+Looking at all the plots, only the Body Mass Index attribute is Normally Distributed.
+
+Blood Pressure and Plasma Glucose attributes come close to a normal distribution, but wont be qualified to be called as normally distributed. 
+The remaining 5 attributes, namely, Pregnany No, Serum Insulin, Age, Triceps Fold Thickness and Diabetes Pedigree Function are nowhereclose to a normal disribution.
+
+————————————————————————————————————————————————————
+
+Question - 2
+Which attributes seem to have a strong correlation with the output (class) variable?Answer - 
+From the correlations, we observe that attribute V2(Plasma glucose concentration) is strongly correlated with V9(class variable) with highest value = 0.4665814 in comparisons to other.
+
+————————————————————————————————————————————————————Question - 3
+Which two attributes have the highest mutual correlation?Answer - 
+Maximum correlation is between V1(Number of times pregnant) and V8(Age) attribute.
+Maximum correlation is :  0.5443412

@@ -1,0 +1,35 @@
+Strategy 1 - Even Wager
+Strategy 2 - Martingale
+Strategy 3 - Reverse Martingale
+
+***************************
+('Round : ', 1)
+***************************
+Strategy 1       10      1200
+Strategy 2       10      1200
+Strategy 3       10      100
+***************************
+('Round : ', 2)
+***************************
+Strategy 1       10      1000
+Strategy 2       10      1400
+Strategy 3       10      0
+***************************
+('Round : ', 3)
+***************************
+Strategy 1       10      400
+Strategy 2       10      600
+Strategy 3       10      900
+***************************
+('Round : ', 4)
+***************************
+Strategy 1       10      1200
+Strategy 2       10      1800
+Strategy 3       10      7200
+***************************
+('Round : ', 5)
+***************************
+Strategy 1       10      600
+Strategy 2       10      1400
+Strategy 3       10      100
+[Finished in 0.0s]
